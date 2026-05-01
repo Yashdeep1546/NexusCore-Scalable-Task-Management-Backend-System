@@ -26,6 +26,22 @@
 
 ---
 
+## 📸 Product Demonstration
+
+
+### 👤 User Dashboard
+*Features: Personal task management, status toggling, and real-time updates.*
+![User Dashboard](./screenshots/demo_user_dashboard.png)
+
+### 👑 Administrator Control Panel
+*Features: Global user management and system-wide task oversight.*
+
+| Manage Users | All System Tasks |
+| :--- | :--- |
+| ![Admin Users](./screenshots/demo_admin_users.png) | ![Admin Tasks](./screenshots/demo_admin_tasks.png) |
+
+---
+
 ## 🏗️ System Architecture & Schema
 
 ### Database Schema
