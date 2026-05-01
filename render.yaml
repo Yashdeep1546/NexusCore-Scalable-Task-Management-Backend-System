@@ -1,5 +1,5 @@
 services:
-  # Backend Web Service
+  # Backend Web Service (Express)
   - type: web
     name: nexuscore-backend
     env: node
@@ -17,10 +17,9 @@ services:
       - key: NODE_ENV
         value: production
 
-  # Frontend Static Site
-  - type: web
+  # Frontend Static Site (React)
+  - type: static_site
     name: nexuscore-frontend
-    env: static
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
