@@ -1,4 +1,5 @@
 services:
+  # Backend Web Service (Express)
   - type: web
     name: nexuscore-backend
     env: node
@@ -16,13 +17,13 @@ services:
       - key: NODE_ENV
         value: production
 
-  - type: web
+  # Frontend Static Site (React)
+  - type: static_site
     name: nexuscore-frontend
-    runtime: static
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
+    publishPath: dist
     envVars:
       - key: VITE_API_URL
         fromService:
@@ -31,6 +32,7 @@ services:
           property: host
 
 databases:
-
   - name: nexuscore-db
-    plan: free  
+    plan: free
+    databaseName: nexuscore
+    user: nexus_admin
